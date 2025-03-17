@@ -10,8 +10,6 @@ const salesData = [
     { month: 'Jun', sales: 500 },
 ];
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28'];
-
 
 const Sales_Chart = ()=>{
     return (

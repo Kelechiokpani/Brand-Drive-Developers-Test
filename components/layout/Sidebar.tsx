@@ -1,5 +1,5 @@
 'use client'
-import { Home, BookOpen, FileText, ClipboardList, MessageSquare, Award, Settings, LifeBuoy } from "lucide-react";
+import { Home, BookOpen, Settings, LifeBuoy } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [

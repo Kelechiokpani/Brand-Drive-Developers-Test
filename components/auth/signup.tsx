@@ -33,7 +33,7 @@ const SignupForm = () => {
     });
 
     return (
-        <Card className="w-[500px] mx-auto mt-20 shadow-lg bg-white">
+        <Card className="w-[500px] mx-auto mt-30 shadow-lg bg-white">
             <CardHeader>
                 <CardTitle>Sign Up</CardTitle>
             </CardHeader>

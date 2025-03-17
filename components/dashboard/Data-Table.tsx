@@ -10,7 +10,7 @@ const columns: ColumnDef<Sale>[] = [
     { accessorKey: "type", header: "Type" },
     { accessorKey: "description", header: "Description" },
     {accessorKey: "amount", header: "Amount",
-        cell: ({ row }:any) => (
+        cell: ({ row }) => (
             <span className={row.original.amount > 0 ? "text-green-600" : "text-red-600"}>
         {row.original.amount.toLocaleString()}
       </span>
@@ -20,7 +20,7 @@ const columns: ColumnDef<Sale>[] = [
     { accessorKey: "time", header: "Time Created" },
     {accessorKey: "status",
         header: "Status",
-        cell: ({ row }:any) => (
+        cell: ({ row }) => (
             <span
                 className={row.original.status === "Successful" ? "text-green-600" : "text-red-600"}
             >
@@ -47,15 +47,6 @@ export default function SalesDataShadTable() {
 
     return (
         <div className="bg-white p-4 shadow-md rounded-lg p-6">
-            {/*<h2 className="font-bold mb-4 text-lg">Sales & Expense Records</h2>*/}
-            {/*<div className='flex  '>*/}
-            {/*    <Input*/}
-            {/*        placeholder="Search by type, description, status..."*/}
-            {/*        value={globalFilter}*/}
-            {/*        onChange={(e) => setGlobalFilter(e.target.value)}*/}
-            {/*        className="mb-4 w-12 py-6 "*/}
-            {/*    />*/}
-            {/*</div>*/}
 
             <div className="flex items-center justify-between mb-8 mt-8">
                 <h2 className="font-bold text-lg">Sales & Expense Records</h2>
@@ -71,9 +62,9 @@ export default function SalesDataShadTable() {
             <div className="overflow-x-auto ">
                 <Table>
                     <TableHeader className='bg-gray-100 '>
-                        {table.getHeaderGroups().map((headerGroup: any) => (
+                        {table.getHeaderGroups().map((headerGroup) => (
                             <TableRow key={headerGroup.id}>
-                                {headerGroup.headers.map((header: any) => (
+                                {headerGroup.headers.map((header) => (
                                     <TableHead
                                         key={header.id}
                                         onClick={header.column.getToggleSortingHandler()}
@@ -88,9 +79,9 @@ export default function SalesDataShadTable() {
                         ))}
                     </TableHeader>
                     <TableBody>
-                        {table.getRowModel().rows.map((row: any) => (
+                        {table.getRowModel().rows.map((row) => (
                             <TableRow key={row.id}>
-                                {row.getVisibleCells().map((cell: any) => (
+                                {row.getVisibleCells().map((cell) => (
                                     <TableCell
                                         key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</TableCell>
                                 ))}

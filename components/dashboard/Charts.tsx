@@ -1,16 +1,6 @@
 'use client'
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, BarChart, Bar } from 'recharts';
+import { Tooltip, ResponsiveContainer, PieChart, Pie, Cell, } from 'recharts';
 
-
-
-const userGrowthData = [
-    { name: 'Week 1', users: 0 },
-    { name: 'Week 2', users: 70 },
-    { name: 'Week 3', users: 150 },
-    { name: 'Week 4', users: 400 },
-    { name: 'Week 5', users: 560 },
-    { name: 'Week 6', users: 710 },
-];
 
 const categoryData = [
     { name: 'Electronics', value: 800 },

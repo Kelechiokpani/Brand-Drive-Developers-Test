@@ -22,7 +22,7 @@ const LoginForm = () => {
             email: Yup.string().email("Invalid email address").required("Email is required"),
             password: Yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
         }),
-        onSubmit: (values:any) => {
+        onSubmit: (values) => {
             console.log("Login Data", values);
             const user = { email: values.email, fullName: 'BD-Test' };
             login(user,keepLoggedIn);
@@ -30,6 +30,10 @@ const LoginForm = () => {
             // Handle API login here
         },
     });
+
+    const handleRoute = ()=>{
+        router.push('/');
+    }
 
     return (
         <Card className="w-[500px] mx-auto mt-20 shadow-lg bg-white">
@@ -91,7 +95,7 @@ const LoginForm = () => {
                     </Button>
 
                     <p className="text-center text-sm">
-                        Don't have an account? <a href="/" className="text-blue-500 hover:underline">Sign Up</a>
+                        Do not have an account? <span onClick={handleRoute} className="text-blue-500 hover:underline">Sign Up</span>
                     </p>
                 </div>
             </CardContent>
